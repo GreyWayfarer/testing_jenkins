@@ -1,5 +1,5 @@
 #!groovy
-// Check ub1 properties
+
 properties([disableConcurrentBuilds()])
 
 pipeline {
@@ -12,16 +12,14 @@ pipeline {
         stage("create docker image") {
             steps {
                 echo "_____________start_____________"
-                    sh 'ls'
-            }  
+                sh 'ls'
+            }
         }
-        /*stage("run docker image") {
+        stage("run docker image") {
             steps {
                 echo "_____________start run_____________"
-                dir ('docker') {
-                    sh 'docker run -i -p 91:91 cloud-native-practice-gontainer:1'
-                }
+                sh 'docker exec -it cloud-native-practice:1 test.sh'
             }  
-        }*/
+        }
     }
 }
