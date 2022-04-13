@@ -18,7 +18,7 @@ pipeline {
         stage("run docker image") {
             steps {
                 echo "_____________start run_____________"
-                sh 'docker exec -it cloud-native-practice:1 test.sh'
+                sh 'test.sh'
             }  
         }
     }
