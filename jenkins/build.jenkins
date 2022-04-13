@@ -15,11 +15,11 @@ pipeline {
                 sh 'ls'
             }
         }
-        stage("run docker image") {
+        /*stage("run docker image") {
             steps {
                 echo "_____________start run_____________"
                 sh './test.sh'
             }  
-        }
+        }*/
     }
 }
